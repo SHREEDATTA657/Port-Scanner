@@ -1,7 +1,7 @@
 Port Scanner 🔍
 
 Description
-A lightweight, custom-built Port Scanner written entirely in Python. This tool allows users to scan a specific IP address for open TCP ports within a user-defined range. It was built from scratch to demonstrate core networking concepts, socket programming, and input validation without relying on massive external network-scanning libraries.
+ A lightweight, custom-built Port Scanner written entirely in Python. This tool allows users to scan a specific IP address for open TCP ports within a user-defined range. It was built from scratch to demonstrate core networking concepts, socket programming, and input validation without relying on massive external network-scanning libraries.
 
 Features
 1.Custom Target Selection: Users can input any valid IPv4 address.
