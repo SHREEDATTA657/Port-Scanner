@@ -3,8 +3,8 @@ import socket
 import ipaddress
 import re
 port_range_pattern = re.compile("([0-9]+)-([0-9]+)")
-port_min = 0
-port_max = 100
+port_min = 1
+port_max = 1024
 open_ports = []
 while True:
     ip_input = input("Enter an IP address to scan: ")
@@ -15,13 +15,13 @@ while True:
     except ValueError:
         print("Invalid IP address. Please try again.")
 while True:
-    print("Enter a port range to scan (e.g., 0-100) :")
+    print("Enter a port range to scan (e.g., 1-1024) :")
     port_range_input = input("Enter port range: ")
     port_range_valid = port_range_pattern.search(port_range_input.replace(" ", ""))
     if port_range_valid:
         port_min = int(port_range_valid.group(1))
         port_max = int(port_range_valid.group(2))
-        if port_min < 0 or port_max > 100 or port_min > port_max:
+        if port_min < 1 or port_max > 65535 or port_min > port_max:
             print("Invalid port range. Please try again.")
         else:
             print(f"Valid port range: {port_min}-{port_max}")
